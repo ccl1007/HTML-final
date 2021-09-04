@@ -1,0 +1,358 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    //全域設定
+    //確保各瀏覽器皆可套用
+}
+
+.wrap {
+    width: 1024px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+#gotop{
+    position: fixed;
+    right:2%;
+    bottom: 2%;
+    color: rgb(235, 165, 86);
+}
+.social {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+
+    .fb {
+        border-right: 1px solid #ccc;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 5px;
+        margin: 5px 0;
+    }
+    a:hover {
+        background-color: #473198;
+        color: #fff;
+    }
+}
+
+.header {
+    background: #e4fde1;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    h1 a {
+        display: block;
+        width: 224px;
+        height: 50px;
+        background: url(https://i.imgur.com/BaPxppy.png);
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.navbar {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarItem a {
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: rgb(51, 143, 100);
+    font-weight: 1000;
+    padding: 20px;
+}
+
+.navbarItem a:hover {
+    color: #fff;
+    background: rgb(51, 143, 100);
+}
+
+.banner {
+    background-image: url(../img/banner.png);
+    background-size: cover;
+    height: 346px;
+    display: flex;
+    align-items: center;
+    h2 {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+        padding: 30px 20px;
+        line-height: 1.5;
+    }
+}
+.course {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 30px 0;
+}
+.course-item {
+    width: 300px;
+    // border-bottom: 5px solid rgb(155, 148, 148);
+    line-height: 1.5;
+    box-shadow: 0px 0px 2px 2px #ccc;
+    padding: 15px;
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    h2 {
+        margin-top: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ol {
+        list-style-type: disc;
+        margin-left: 30px;
+    }
+}
+
+.compare {
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    .course {
+        margin: 20 auto;
+        th,
+        td {
+            padding: 10px 100px 10px 20px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background: #7777;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #59a96a;
+            font-weight: bold;
+        }
+    }
+}
+
+.contact {
+    background-image: url(https://upload.cc/i1/2021/08/23/um96BC.png);
+    background-repeat: repeat-x;
+    //no-repeat,repeat-x, repeat-y;
+    background-color: #009872;
+    //讓div延伸的背景顏色一致
+    color: #fff;
+    margin: 0 auto;
+
+    h3 {
+        font-size: 30px;
+        font-weight:bold;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    input {
+        padding: 10px;
+    }
+
+    .formleft {
+        display: flex;
+        flex-direction: column;
+
+        width: 45%;
+        padding: 0 10px 20px 10px;
+
+        label {
+            margin-top: 20px;
+        }
+    }
+
+    .right {
+        width: 50%;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    .formright {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        padding: 0 10px 20px 10px;
+
+        label{
+            margin-bottom: 20px;
+        }
+
+        .submit {
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+    }
+}
+
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
