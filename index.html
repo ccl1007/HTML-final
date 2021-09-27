@@ -12,13 +12,19 @@
     <meta property="og:url" content="FB上的網址" />
     <meta property="og:image" content="FB的圖片" />
     <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" href="stylesheet/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
     <script src="js\all.js"></script>
+    <link rel="stylesheet" href="stylesheet/all.css">
 </head>
 
 <body>
+
+    <div class="wrap">
         <a href="#" id="gotop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
         <ul class="social">
             <li>
@@ -40,43 +46,71 @@
                 <li class="navbarItem"><a href="#">首頁</a></li>
                 <li class="navbarItem">
                     <a href="#" class="dropdown">產品介紹</a>
-                    
-                        <ul>
-                          <li><a href="#">本季新款</a></li>
-                          <li><a href="#">限時特賣</a></li>
-                          <li><a href="#">現貨出清</a></li>
-                        </ul>
-                    
+
+                    <ul class="dropdown-open">
+                        <li><a href="#">本季新款</a></li>
+                        <li><a href="#">限時特賣</a></li>
+                        <li><a href="#">現貨出清</a></li>
+                    </ul>
+
                 </li>
                 <li class="navbarItem">
                     <a href="#" class="dropdown">查詢訂單</a>
-                    
-                        <ul>
-                          <li><a href="#">購物車</a></li>
-                          <li><a href="#">退貨申請</a></li>
-                          <li><a href="#">購物金</a></li>
-                        </ul>
-                    
+
+                    <ul class="dropdown-open">
+                        <li><a href="#">購物車</a></li>
+                        <li><a href="#">退貨申請</a></li>
+                        <li><a href="#">購物金</a></li>
+                    </ul>
+
                 </li>
                 <li class="navbarItem"><a href="#">聯絡我們</a></li>
             </ul>
         </header>
         <div class="banner">
             <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80"
+                            alt="1"></div>
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            alt="2"></div>
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            alt="3"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+
         </div>
+
+
         <ul class="course">
             <li class="course-item">
-                <img src="https://i.imgur.com/ymIPFmN.png" alt="HTML5 logo">
+                <a href="https://i.imgur.com/ymIPFmN.png" data-lightbox="course1" data-title="HTML5 logo"><img
+                        src="https://i.imgur.com/ymIPFmN.png" alt="HTML5 logo"></a>
+
                 <h3>HTML 5 基礎教學</h3>
                 <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
             </li>
             <li class="course-item">
-                <img src="https://i.imgur.com/5EtFYhI.png" alt="響應式網站 logo">
+                <a href="https://i.imgur.com/5EtFYhI.png" data-lightbox="course2" data-title="響應式網站 logo"><img
+                        src="https://i.imgur.com/5EtFYhI.png" alt="響應式網站 logo"></a>
+
                 <h3>響應式網站設計</h3>
                 <p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。</p>
             </li>
             <li class="course-item">
-                <img src="https://i.imgur.com/LUGYkLk.png" alt="jQuery logo">
+                <a href="https://i.imgur.com/LUGYkLk.png" data-lightbox="course3" data-title="jQuery logo"><img
+                        src="https://i.imgur.com/LUGYkLk.png" alt="jQuery logo"></a>
+
                 <h3>jQuery 實戰教學</h3>
                 <p>本課程有以下特色：</p>
                 <ul>
@@ -136,53 +170,53 @@
         </div>
 
         <div class="contact">
-           
-              <h2>對我們的課程有興趣嗎?<br>
-              歡迎留下您的資料</h2>
-            
-            
+
+            <h2>對我們的課程有興趣嗎?<br>
+                歡迎留下您的資料</h2>
+
+
             <form class="container">
-              <div class="formleft" action="index.html">
-                <label for="name">姓名:</label>
-                <input type="text" id="name" name:"name" placeholder="請輸入姓名">
-                <label for="phone">電話:</label>
-                <input type="tel" id="phone" name:"phone" placeholder="請輸入電話">
-                <label for="email">電子信箱:</label>
-                <input type="email" id="email" name:"email" placeholder="請輸入電子信箱">
-                <label for="male">性別:</label>
-                <div class="inline">
-                  <input type="radio" name="gender" value="male" id="male">
-                  <label for="male">男性</label>
-                  <input type="radio" name="gender" value="female" id="female">
-                  <label for="female">女性</label>
+                <div class="formleft" action="index.html">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name:"name" placeholder="請輸入姓名">
+                    <label for="phone">電話:</label>
+                    <input type="tel" id="phone" name:"phone" placeholder="請輸入電話">
+                    <label for="email">電子信箱:</label>
+                    <input type="email" id="email" name:"email" placeholder="請輸入電子信箱">
+                    <label for="male">性別:</label>
+                    <div class="inline">
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">男性</label>
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female">女性</label>
+                    </div>
+                    <label>如何知道我們：</label>
+                    <div class="inline">
+                        <input type="checkbox" name="knowfrom" id="web" value="web">
+                        <label for="web">網路</label>
+                        <input type="checkbox" name="knowfrom" id="friends" value="friends">
+                        <label for="friends">朋友介紹</label>
+                        <input type="checkbox" name="knowfrom" id="ad" value="ad">
+                        <label for="ad">廣告推送</label>
+                    </div>
+
+                    <label for="age">年齡：</label>
+                    <select name="age" id="age">
+                        <option value="11-20">11-20</option>
+                        <option value="21-30">21-30</option>
+                        <option value="31-40">31-40</option>
+                        <option value="41-50">41-50</option>
+                    </select>
                 </div>
-                <label >如何知道我們：</label>
-                <div class="inline">
-                  <input type="checkbox" name="knowfrom" id="web" value="web">
-                  <label for="web">網路</label>
-                  <input type="checkbox" name="knowfrom" id="friends" value="friends">
-                  <label for="friends">朋友介紹</label>
-                  <input type="checkbox" name="knowfrom" id="ad" value="ad">
-                  <label for="ad">廣告推送</label>
+
+                <div class="formright" action="index.html">
+                    <label for="content">請告訴我們你的想法:</label>
+                    <textarea name="content" id="content" placeholder="請在此輸入" cols="30" rows="25"></textarea>
+                    <input class="submit" type="submit" value="送出">
                 </div>
-          
-                <label for="age">年齡：</label>
-                <select name="age" id="age">
-                  <option value="11-20">11-20</option>
-                  <option value="21-30">21-30</option>
-                  <option value="31-40">31-40</option>
-                  <option value="41-50">41-50</option>
-                </select>
-              </div>
-          
-              <div class="formright" action="index.html">
-                <label for="content">請告訴我們你的想法:</label>
-                <textarea name="content" id="content" placeholder="請在此輸入" cols="30" rows="25"></textarea>
-                <input class="submit" type="submit" value="送出">
-              </div>
-          
+
             </form>
-          </div>
+        </div>
 
         <footer class="footer">
             <a href="https://courses.hexschool.com/"><img src="img\footerLogo.png" alt="footerLogo"></a>
@@ -191,10 +225,11 @@
                 <li>電話：<a href="tel:0900123456">0900123456</a></li>
             </ul>
         </footer>
-        
+
+    </div>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 
 </html>
