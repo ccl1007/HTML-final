@@ -143,14 +143,20 @@ table {
     font-size: 18px;
 }
 
-#gotop{
+#gotop {
     position: fixed;
-    right:2%;
+    right: 2%;
     bottom: 2%;
     color: rgb(235, 165, 86);
 }
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
 .social {
-    background-color: #fff;
+
     display: flex;
     justify-content: flex-end;
 
@@ -159,11 +165,10 @@ table {
     }
 
     a {
-        display: block;
-        text-decoration: none;
         padding: 5px;
         margin: 5px 0;
     }
+
     a:hover {
         background-color: #473198;
         color: #fff;
@@ -177,7 +182,6 @@ table {
     justify-content: space-between;
 
     h1 a {
-        display: block;
         width: 224px;
         height: 50px;
         background: url(https://i.imgur.com/BaPxppy.png);
@@ -188,25 +192,30 @@ table {
 }
 
 .navbar {
-    text-align: center;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    height: 58px;
 }
 
-.navbarItem a {
-    font-size: 18px;
-    display: block;
-    text-decoration: none;
-    color: rgb(51, 143, 100);
-    font-weight: 1000;
-    padding: 20px;
+.navbarItem {
+    a {
+        color: rgb(51, 143, 100);
+        font-weight: 1000;
+        padding: 20px;
+
+        &:hover,&.active {
+            color: #fff;
+            background: rgb(51, 143, 100);
+        }
+    }
+
+    ul {
+        display: none;
+    }
 }
 
-.navbarItem a:hover {
-    color: #fff;
-    background: rgb(51, 143, 100);
-}
+
 
 .banner {
     background-image: url(../img/banner.png);
@@ -214,6 +223,7 @@ table {
     height: 346px;
     display: flex;
     align-items: center;
+
     h2 {
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
@@ -224,32 +234,35 @@ table {
         line-height: 1.5;
     }
 }
+
 .course {
     display: flex;
     justify-content: space-around;
     padding: 10px;
     margin: 30px 0;
 }
+
 .course-item {
     width: 300px;
     // border-bottom: 5px solid rgb(155, 148, 148);
     line-height: 1.5;
     box-shadow: 0px 0px 2px 2px #ccc;
     padding: 15px;
+
     img {
         max-height: 100%;
         max-width: 100%;
     }
-    h2 {
+
+    h3 {
         margin-top: 10px;
         font-size: 24px;
         font-weight: bold;
         text-align: center;
     }
 
-    ol {
-        list-style-type: disc;
-        margin-left: 30px;
+    ul {
+        list-style-type: disc inside;
     }
 }
 
@@ -261,8 +274,9 @@ table {
         margin: 20px;
     }
 
-    .course {
-        margin: 20 auto;
+    .cptable {
+        margin: 20px auto;
+
         th,
         td {
             padding: 10px 100px 10px 20px;
@@ -270,6 +284,7 @@ table {
             border-bottom: 1px solid #ccc;
             text-align: left;
         }
+
         th {
             background: #7777;
             font-weight: bold;
@@ -291,23 +306,28 @@ table {
     color: #fff;
     margin: 0 auto;
 
-    h3 {
+    h2 {
         font-size: 30px;
-        font-weight:bold;
+        font-weight: bold;
         color: #fff;
         text-align: center;
         padding: 20px;
+        border-bottom: 1px solid #fff;
+        margin: 10px;
     }
 }
 
 
 .container {
+    //下 Flex 設定 才能呈現兩欄式
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     margin-bottom: 30px;
+
     input {
         padding: 10px;
+        display: block;
     }
 
     .formleft {
@@ -327,26 +347,34 @@ table {
     }
 
     .inline {
-        display: inline;
+        display: flex;
+        //用flex-end比用center整齊
+        align-items: flex-end;
     }
 
     .formright {
-        display: flex;
-        flex-direction: column;
         width: 45%;
         padding: 0 10px 20px 10px;
+        position: relative;
 
-        label{
-            margin-bottom: 20px;
+        textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
         }
 
         .submit {
             border-radius: 5px;
             width: 100px;
             height: 50px;
-            margin-top: 20px;
             cursor: pointer;
-            align-self: flex-end;
+            position: absolute;
+            right: 10px;
+
+
+            &:hover {
+                box-shadow: 0 0 5px #d8d5d5;
+            }
         }
     }
 }
@@ -355,4 +383,13 @@ table {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+
+    a {
+        display: inline;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
 }

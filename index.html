@@ -14,11 +14,11 @@
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="stylesheet/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js\all.js"></script>
 </head>
 
 <body>
-    
-    <div class="wrap">
         <a href="#" id="gotop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
         <ul class="social">
             <li>
@@ -38,39 +38,58 @@
 
             <ul class="navbar">
                 <li class="navbarItem"><a href="#">首頁</a></li>
-                <li class="navbarItem"><a href="#">產品介紹</a></li>
+                <li class="navbarItem">
+                    <a href="#" class="dropdown">產品介紹</a>
+                    
+                        <ul>
+                          <li><a href="#">本季新款</a></li>
+                          <li><a href="#">限時特賣</a></li>
+                          <li><a href="#">現貨出清</a></li>
+                        </ul>
+                    
+                </li>
+                <li class="navbarItem">
+                    <a href="#" class="dropdown">查詢訂單</a>
+                    
+                        <ul>
+                          <li><a href="#">購物車</a></li>
+                          <li><a href="#">退貨申請</a></li>
+                          <li><a href="#">購物金</a></li>
+                        </ul>
+                    
+                </li>
                 <li class="navbarItem"><a href="#">聯絡我們</a></li>
             </ul>
         </header>
         <div class="banner">
             <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
         </div>
-        <div class="course">
-            <div class="course-item">
+        <ul class="course">
+            <li class="course-item">
                 <img src="https://i.imgur.com/ymIPFmN.png" alt="HTML5 logo">
-                <h2>HTML 5 基礎教學</h2>
+                <h3>HTML 5 基礎教學</h3>
                 <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
-            </div>
-            <div class="course-item">
+            </li>
+            <li class="course-item">
                 <img src="https://i.imgur.com/5EtFYhI.png" alt="響應式網站 logo">
-                <h2>響應式網站設計</h2>
+                <h3>響應式網站設計</h3>
                 <p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。</p>
-            </div>
-            <div class="course-item">
+            </li>
+            <li class="course-item">
                 <img src="https://i.imgur.com/LUGYkLk.png" alt="jQuery logo">
-                <h2>jQuery 實戰教學</h2>
+                <h3>jQuery 實戰教學</h3>
                 <p>本課程有以下特色：</p>
-                <ol>
+                <ul>
                     <li>瞭解變數的使用方法</li>
                     <li>學習並操作DOM</li>
                     <li>學習基本數學運算方法</li>
                     <li>套件的操作及運用</li>
-                </ol>
-            </div>
-        </div>
+                </ul>
+            </li>
+        </ul>
         <div class="compare">
             <h2>線上及實體課程的差異</h2>
-            <table class="course">
+            <table class="cptable">
                 <tr>
                     <th>項目</th>
                     <th>Hex School線上課程</th>
@@ -118,18 +137,18 @@
 
         <div class="contact">
            
-              <h3>對我們的課程有興趣嗎?</h3>
-              <h3>歡迎留下您的資料</h3>
+              <h2>對我們的課程有興趣嗎?<br>
+              歡迎留下您的資料</h2>
             
-            <hr>
+            
             <form class="container">
               <div class="formleft" action="index.html">
                 <label for="name">姓名:</label>
                 <input type="text" id="name" name:"name" placeholder="請輸入姓名">
                 <label for="phone">電話:</label>
-                <input type="text" id="phone" name:"phone" placeholder="請輸入電話">
+                <input type="tel" id="phone" name:"phone" placeholder="請輸入電話">
                 <label for="email">電子信箱:</label>
-                <input type="text" id="email" name:"email" placeholder="請輸入電子信箱">
+                <input type="email" id="email" name:"email" placeholder="請輸入電子信箱">
                 <label for="male">性別:</label>
                 <div class="inline">
                   <input type="radio" name="gender" value="male" id="male">

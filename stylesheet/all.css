@@ -148,8 +148,12 @@ table {
   color: #eba556;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+}
+
 .social {
-  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,8 +167,6 @@ table {
 }
 
 .social a {
-  display: block;
-  text-decoration: none;
   padding: 5px;
   margin: 5px 0;
 }
@@ -186,7 +188,6 @@ table {
 }
 
 .header h1 a {
-  display: block;
   width: 224px;
   height: 50px;
   background: url(https://i.imgur.com/BaPxppy.png);
@@ -196,30 +197,29 @@ table {
 }
 
 .navbar {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: center;
+  height: 58px;
 }
 
 .navbarItem a {
-  font-size: 18px;
-  display: block;
-  text-decoration: none;
   color: #338f64;
   font-weight: 1000;
   padding: 20px;
 }
 
-.navbarItem a:hover {
+.navbarItem a:hover, .navbarItem a.active {
   color: #fff;
   background: #338f64;
+}
+
+.navbarItem ul {
+  display: none;
 }
 
 .banner {
@@ -267,16 +267,15 @@ table {
   max-width: 100%;
 }
 
-.course-item h2 {
+.course-item h3 {
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
 
-.course-item ol {
-  list-style-type: disc;
-  margin-left: 30px;
+.course-item ul {
+  list-style-type: disc inside;
 }
 
 .compare h2 {
@@ -286,24 +285,24 @@ table {
   margin: 20px;
 }
 
-.compare .course {
-  margin: 20 auto;
+.compare .cptable {
+  margin: 20px auto;
 }
 
-.compare .course th,
-.compare .course td {
+.compare .cptable th,
+.compare .cptable td {
   padding: 10px 100px 10px 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   text-align: left;
 }
 
-.compare .course th {
+.compare .cptable th {
   background: #7777;
   font-weight: bold;
 }
 
-.compare .course .highlight {
+.compare .cptable .highlight {
   color: #59a96a;
   font-weight: bold;
 }
@@ -316,12 +315,14 @@ table {
   margin: 0 auto;
 }
 
-.contact h3 {
+.contact h2 {
   font-size: 30px;
   font-weight: bold;
   color: #fff;
   text-align: center;
   padding: 20px;
+  border-bottom: 1px solid #fff;
+  margin: 10px;
 }
 
 .container {
@@ -330,12 +331,13 @@ table {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   margin-bottom: 30px;
 }
 
 .container input {
   padding: 10px;
+  display: block;
 }
 
 .container .formleft {
@@ -359,33 +361,38 @@ table {
 }
 
 .container .inline {
-  display: inline;
-}
-
-.container .formright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 45%;
-  padding: 0 10px 20px 10px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.container .formright label {
-  margin-bottom: 20px;
+.container .formright {
+  width: 45%;
+  padding: 0 10px 20px 10px;
+  position: relative;
+}
+
+.container .formright textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
 }
 
 .container .formright .submit {
   border-radius: 5px;
   width: 100px;
   height: 50px;
-  margin-top: 20px;
   cursor: pointer;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  position: absolute;
+  right: 10px;
+}
+
+.container .formright .submit:hover {
+  -webkit-box-shadow: 0 0 5px #d8d5d5;
+          box-shadow: 0 0 5px #d8d5d5;
 }
 
 .footer {
@@ -396,5 +403,13 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.footer a {
+  display: inline;
+}
+
+.footer a:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=all.css.map */
