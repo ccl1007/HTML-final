@@ -208,13 +208,18 @@ a {
   height: 58px;
 }
 
+.navbarItem > a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .navbarItem a {
   color: #338f64;
   font-weight: 1000;
   padding: 20px;
 }
 
-.navbarItem a:hover, .navbarItem a.active {
+.navbarItem a:hover {
   color: #fff;
   background: #338f64;
 }

@@ -200,17 +200,26 @@ a {
 }
 
 .navbarItem {
+    >a.active {
+        text-decoration:underline;
+        font-weight: bold;
+    }
     a {
         color: rgb(51, 143, 100);
         font-weight: 1000;
         padding: 20px;
 
-        &:hover,
-        &.active {
+        &:hover{
             color: #fff;
             background: rgb(51, 143, 100);
         }
+        
+
     }
+
+    
+
+
 
     ul {
         display: none;
@@ -222,6 +231,7 @@ a {
 
         }
     }
+
 }
 
 
